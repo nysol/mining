@@ -1,0 +1,40 @@
+CXX = g++ 
+
+CXXFLAGS = -O3 -DNDEBUG -Wno-deprecated -pedantic -ansi -finline-functions -foptimize-sibling-calls -Wcast-qual -Wwrite-strings -Wsign-promo -Wcast-align -Wno-long-long -fexpensive-optimizations -funroll-all-loops -ffast-math -fomit-frame-pointer -pipe -I./
+
+ifeq ($(shell uname),Linux)
+	LINKFLAGS = -lm /usr/local/lib/libboost_system.a
+else
+ifeq ($(shell uname),Darwin)
+	LINKFLAGS = -lm /usr/local/lib/libboost_system.a
+else
+	LINKFLAGS = -lm -lboost_system
+endif
+endif
+
+
+%cxxflags="-stdlib=libstdc++" linkflags="-stdlib=libstdc++"
+
+SRCS = \
+	Main.cpp \
+	SketchSort.cpp \
+
+OBJS = $(SRCS:%.cpp=%.o)
+
+version=20151022
+all: sketchsort
+
+sketchsort: $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OTHERFLAGS) $(OBJS) $(LINKFLAGS) -o sketchsort_${version}
+
+install:
+	install sketchsort_${version} /usr/local/bin
+
+debug:
+	make all CXXFLAGS="-ggdb -W -Wall -pedantic"
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(OTHERFLAGS) -c $<
+
+clean:
+	rm -f sketchsort_${version} *.o *~

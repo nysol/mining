@@ -18,7 +18,7 @@ cp = "$(srcdir)"
 
 $CFLAGS = " -O3 -DNDEBUG -D_NO_MAIN_ -Wno-deprecated -pedantic -ansi -finline-functions -foptimize-sibling-calls -Wcast-qual -Wwrite-strings -Wsign-promo -Wcast-align -Wno-long-long -fexpensive-optimizations -funroll-all-loops -ffast-math -fomit-frame-pointer -pipe -I./"
 $CPPFLAGS = " -O3 -DNDEBUG -D_NO_MAIN_ -Wno-deprecated -pedantic -ansi -finline-functions -foptimize-sibling-calls -Wcast-qual -Wwrite-strings -Wsign-promo -Wcast-align -Wno-long-long -fexpensive-optimizations -funroll-all-loops -ffast-math -fomit-frame-pointer -pipe -I./"
-$CXXFLAGS = " -O3 -stdlib=libstdc++ -DNDEBUG -D_NO_MAIN_ -Wno-deprecated -pedantic -ansi -finline-functions -foptimize-sibling-calls -Wcast-qual -Wwrite-strings -Wsign-promo -Wcast-align -Wno-long-long -fexpensive-optimizations -funroll-all-loops -ffast-math -fomit-frame-pointer -pipe -I./"
+$CXXFLAGS = " -O3 -DNDEBUG -D_NO_MAIN_ -Wno-deprecated -pedantic -ansi -finline-functions -foptimize-sibling-calls -Wcast-qual -Wwrite-strings -Wsign-promo -Wcast-align -Wno-long-long -fexpensive-optimizations -funroll-all-loops -ffast-math -fomit-frame-pointer -pipe -I./"
 
 $LOCAL_LIBS += " -lstdc++ -lkgmod3 -lm -lboost_system"
 

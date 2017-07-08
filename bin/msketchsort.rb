@@ -10,7 +10,7 @@ require 'fileutils'
 # 1.0: initial develpoment 2014/12/02
 # 1.1: added the seed for org sketchsort and msketchsort  2015/10/24
 # 1.2: added error process from sketchsort 2016/11/5
-$version="1.2"
+$version="1.3"
 
 def help
 

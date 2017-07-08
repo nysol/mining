@@ -16,7 +16,7 @@ extern "C" {
 }
 
 
-VALUE lcmrun(VALUE self,VALUE argvV){
+VALUE sketchsort(VALUE self,VALUE argvV){
 
 	string argstr=RSTRING_PTR(argvV);
 	vector<char *> opts = kglib::splitToken(const_cast<char*>(argstr.c_str()), ' ',true);
@@ -50,7 +50,7 @@ void Init_sketchsortrun(void)
 {
 	// モジュール定義:MCMD::xxxxの部分
 	VALUE mtake=rb_define_module("NYSOL_MINING");
-	rb_define_module_function(mtake,"run_sketchsort"       , (VALUE (*)(...))lcmrun,1);
+	rb_define_module_function(mtake,"run_sketchsort"       , (VALUE (*)(...))sketchsort,1);
 }
 
 

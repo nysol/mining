@@ -4,7 +4,7 @@ require "rubygems"
 
 spec = Gem::Specification.new do |s|
   s.name="nysol-mining"
-  s.version="3.0.0"
+  s.version="3.0.1"
   s.author="NYSOL"
   s.email="info@nysol.jp"
   s.homepage="http://www.nysol.jp/"
@@ -32,6 +32,7 @@ spec = Gem::Specification.new do |s|
 		"bin/mgnfeatures.rb",
 		"bin/msm.rb",
 		"bin/mglmnet.rb",
+		"bin/m2glmnet.rb",
 		"bin/midxmine.rb"
 	])
 
@@ -48,6 +49,7 @@ spec = Gem::Specification.new do |s|
 		"mnewman.rb",
 		"mgnfeatures.rb",
 		"mglmnet.rb",
+		"m2glmnet.rb",
 		"msm.rb",
 		"midxmine.rb"
 	]

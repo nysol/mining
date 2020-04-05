@@ -31,7 +31,6 @@ spec = Gem::Specification.new do |s|
 		"bin/mnewman.rb",
 		"bin/mgnfeatures.rb",
 		"bin/msm.rb",
-		"bin/mglmnet.rb",
 		"bin/m2glmnet.rb",
 		"bin/midxmine.rb"
 	])
@@ -48,7 +47,6 @@ spec = Gem::Specification.new do |s|
 		"msketchsort.rb",
 		"mnewman.rb",
 		"mgnfeatures.rb",
-		"mglmnet.rb",
 		"m2glmnet.rb",
 		"msm.rb",
 		"midxmine.rb"

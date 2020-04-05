@@ -64,7 +64,19 @@ int main(int argc, char **argv)
 
 int sketchsort_main (int argc, char **argv){
 
-  parse_parameters(argc, argv);
+	fname = NULL;
+	oname = NULL;
+	hamDist      = 1;
+	numblocks    = 4;
+	numchunks    = 3;
+	cosDist      = 0.01;
+	autoFlag     = false;
+	missingratio = 0.0001;
+	centering    = false;
+	windowsize   = 0;
+	seed         = 1;
+
+	parse_parameters(argc, argv);
 
   SketchSort sketchsort;
   sketchsort.run(fname, oname, numblocks, hamDist, cosDist, numchunks, autoFlag, missingratio, centering, windowsize, seed);
